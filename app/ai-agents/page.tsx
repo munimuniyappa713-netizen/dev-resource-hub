@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import AgentsClient from "./AgentsClient";
 
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: "AI Agent Explorer | Dev Resource Hub",
   description: "Discover the best autonomous AI agents, coding agents, and frameworks like Devin, Manus, CrewAI, and LangGraph.",

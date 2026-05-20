@@ -14,6 +14,10 @@ export default function LoginPage() {
 
   const handleEmailLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!supabase) {
+      setMessage({ type: "error", text: "Authentication is currently unavailable. Please check your configuration." });
+      return;
+    }
     setLoading(true);
     setMessage(null);
 
@@ -33,6 +37,10 @@ export default function LoginPage() {
   };
 
   const handleGithubLogin = async () => {
+    if (!supabase) {
+      setMessage({ type: "error", text: "Authentication is currently unavailable. Please check your configuration." });
+      return;
+    }
     await supabase.auth.signInWithOAuth({
       provider: "github",
       options: {

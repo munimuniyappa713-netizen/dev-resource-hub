@@ -30,7 +30,10 @@
 - [🚀 Key Routes & Features](#-key-routes--features)
 - [🏗 Platform Architecture](#-platform-architecture)
 - [🛠 Tech Stack](#-tech-stack)
-- [⚡ Quick Start](#-quick-start)
+- [⚡ Local Setup](#-local-setup)
+- [🔐 Environment Configuration](#-environment-configuration)
+- [🚀 GitHub Pages Deployment](#-github-pages-deployment)
+- [🗄️ Supabase Integration](#️-supabase-integration)
 - [🤝 Contributing](#-contributing)
 - [🌍 Community](#-community)
 - [🌟 Roadmap](#-roadmap)
@@ -61,21 +64,6 @@ The AI ecosystem is growing rapidly, but discovering high-quality tools, prompts
 
 ---
 
-## 🚀 Key Routes & Features
-
-| Feature | Description |
-| :--- | :--- |
-| **AI Agents** | Explore autonomous and coding agents with technical stack labels. |
-| **Prompts Library** | A curated marketplace for high-performance system and developer prompts. |
-| **Tools Hub** | The definitive directory of AI IDEs, UI builders, and frameworks. |
-| **Marketplace** | Unified portal for resource discovery and category rankings. |
-| **Trending** | Live podium-style rankings of the most starred and viewed tools. |
-| **Compare** | Side-by-side feature comparisons (IDEs, Agents, Frameworks). |
-| **Showcase** | Hall of Fame featuring projects built by the community. |
-| **Docs & Roadmap** | Technical overview and our 4-phase ecosystem expansion plan. |
-
----
-
 ## 🏗 Platform Architecture
 
 ```bash
@@ -93,22 +81,9 @@ app/
 
 ---
 
-## 🛠 Tech Stack
+## ⚡ Local Setup
 
-| Category | Technology |
-| :--- | :--- |
-| **Framework** | Next.js 16 (Turbopack) |
-| **Styling** | Tailwind CSS v4 |
-| **UI Design** | Glassmorphism Design System |
-| **Icons** | Lucide React |
-| **Animations** | Framer Motion |
-| **Search** | Fuse.js |
-| **Database/Auth** | Supabase |
-| **Language** | TypeScript |
-
----
-
-## ⚡ Quick Start
+Follow these steps to get the project running on your local machine:
 
 ### 1. Clone the repository
 ```bash
@@ -121,12 +96,60 @@ cd dev-resource-hub
 npm install
 ```
 
-### 3. Run locally
+### 3. Run the development server
 ```bash
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to see the result.
+
+---
+
+## 🔐 Environment Configuration
+
+The project uses Supabase for features like bookmarks and likes. However, **it is designed to build and run even without these variables**.
+
+To enable Supabase features, create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+See `.env.example` for a template.
+
+---
+
+## 🚀 GitHub Pages Deployment
+
+This project is optimized for **GitHub Pages** using Next.js static export.
+
+### Automated Deployment
+Every push to the `main` branch triggers a GitHub Action (`.github/workflows/deploy.yml`) that builds and deploys the site automatically.
+
+### Manual Static Export
+To generate the static site locally:
+
+```bash
+npm run build
+```
+
+The output will be in the `out/` directory, which can be hosted on any static web server.
+
+---
+
+## 🗄️ Supabase Integration
+
+We use a **Safe Initialization** pattern to ensure the app never crashes during build or if environment variables are missing:
+
+```ts
+// lib/supabase.ts
+export const supabase = supabaseUrl && supabaseAnonKey 
+  ? createClient(supabaseUrl, supabaseAnonKey) 
+  : null;
+```
+
+When `supabase` is `null`, components gracefully fallback to static data or disable interactive features (like liking) with a user-friendly message.
 
 ---
 
@@ -150,17 +173,6 @@ We are building the ultimate AI developer ecosystem, and we need your help! Whet
 
 ---
 
-## 🌍 Join the Community
-
-* 💬 [GitHub Discussions](https://github.com/saikirantechy/dev-resource-hub/discussions)
-* 🚀 [SKT Nexus Community](https://sktnexus.com)
-* 📢 [WhatsApp Channel](https://whatsapp.com/channel/0029Va9W8X6LCoWp9J0m2S3j)
-* 🧠 AI Builders Network
-
-Together we're building the future of AI development.
-
----
-
 ## 🌟 Roadmap
 
 - [x] **Phase 1** — Core Architecture & Route Expansion
@@ -169,16 +181,6 @@ Together we're building the future of AI development.
 - [x] **Phase 3** — User Auth (Supabase) & Backend Migration
 - [ ] **Phase 4** — AI Workflow Builder (Visual Nodes)
 - [ ] **Phase 4** — Semantic AI Search
-
----
-
-## 🌌 Vision
-
-Our long-term goal is to evolve **Dev Resource Hub** into:
-* The "GitHub" for AI resources
-* A discovery engine for AI developers
-* An open ecosystem for AI builders
-* A community-powered innovation platform
 
 ---
 

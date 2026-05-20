@@ -12,9 +12,10 @@ export function useResourceStats(resourceId: string) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!resourceId) return;
+    if (!resourceId || !supabase) return;
 
     const fetchStats = async () => {
+      if (!supabase) return;
       // 1. Fetch likes and views from 'resources' table
       const { data: resourceData } = await supabase
         .from("resources")
@@ -28,7 +29,7 @@ export function useResourceStats(resourceId: string) {
       }
 
       // 2. Check if current user liked it
-      if (user) {
+      if (user && supabase) {
         const { data: likeData } = await supabase
           .from("likes")
           .select("id")
@@ -54,12 +55,15 @@ export function useResourceStats(resourceId: string) {
       .subscribe();
 
     return () => {
-      supabase.removeChannel(channel);
+      if (supabase) {
+        supabase.removeChannel(channel);
+      }
     };
   }, [resourceId, user]);
 
   const toggleLike = async () => {
     if (!user) return alert("Please login to like resources!");
+    if (!supabase) return;
 
     if (isLiked) {
       // Unlike
@@ -76,6 +80,7 @@ export function useResourceStats(resourceId: string) {
 
   const incrementView = async () => {
      // RPC call or direct update for simplicity
+     if (!supabase) return;
      await supabase.rpc("increment_views", { resource_slug: resourceId });
   };
 
