@@ -1,26 +1,21 @@
-# 📚 Learning Resources
+## Free Learning Platforms
 
-Free and high-quality platforms to learn coding and technology.
+Here are some high-quality platforms where developers can learn for free:
 
----
+- **[freeCodeCamp](https://www.freecodecamp.org/)**  
+  Interactive coding lessons, projects, and certifications.
 
-- **freeCodeCamp** – Interactive coding lessons, projects, and certifications.  
-  🔗 [https://www.freecodecamp.org](https://www.freecodecamp.org)
+- **[The Odin Project](https://www.theodinproject.com/)**  
+  Full-stack curriculum with hands-on projects.
 
-- **The Odin Project** – Full-stack curriculum with hands-on projects.  
-  🔗 [https://www.theodinproject.com](https://www.theodinproject.com)
+- **[Khan Academy](https://www.khanacademy.org/computing/computer-programming)**  
+  Beginner-friendly programming tutorials and computer science basics.
 
-- **CS50 (Harvard)** – World-renowned introduction to computer science.  
-  🔗 [https://cs50.harvard.edu](https://cs50.harvard.edu)
+- **[CS50 (Harvard)](https://cs50.harvard.edu/x/)**  
+  World-renowned introduction to computer science.
 
-- **Khan Academy** – Beginner-friendly programming tutorials and computer science basics.  
-  🔗 [https://www.khanacademy.org](https://www.khanacademy.org)
-
-- **MIT OpenCourseWare** – Free access to MIT’s computer science and engineering courses.  
-  🔗 [https://ocw.mit.edu](https://ocw.mit.edu)
-
-- **MDN Web Docs** – The ultimate resource for web developer documentation  
-  🔗 [https://developer.mozilla.org](https://developer.mozilla.org)
+- **[MIT OpenCourseWare](https://ocw.mit.edu/)**  
+  Free access to MIT’s computer science and engineering courses.
 
 ---
 

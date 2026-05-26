@@ -1,0 +1,108 @@
+[
+  {
+    "title": "Frontend Developer",
+    "description": "Learn modern frontend development technologies and frameworks.",
+    "category": "Frontend",
+    "difficulty": "Beginner",
+    "duration": "3-6 Months",
+    "icon": "Code",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "resources": [
+      { "name": "MDN Web Docs", "url": "https://developer.mozilla.org/" },
+      { "name": "freeCodeCamp", "url": "https://www.freecodecamp.org/" },
+      { "name": "Frontend Mentor", "url": "https://www.frontendmentor.io/" }
+    ]
+  },
+  {
+    "title": "Backend Developer",
+    "description": "Master backend technologies, databases, and API development.",
+    "category": "Backend",
+    "difficulty": "Intermediate",
+    "duration": "4-7 Months",
+    "icon": "Server",
+    "skills": [
+      "Node.js",
+      "Express",
+      "REST APIs",
+      "PostgreSQL",
+      "MongoDB",
+      "Authentication"
+    ],
+    "resources": [
+      { "name": "Node.js Docs", "url": "https://nodejs.org/en/docs/" },
+      { "name": "Express Docs", "url": "https://expressjs.com/" },
+      { "name": "PostgreSQL Docs", "url": "https://www.postgresql.org/docs/" }
+    ]
+  },
+  {
+    "title": "Full Stack Developer",
+    "description": "Combine frontend and backend skills to build complete applications.",
+    "category": "Full Stack",
+    "difficulty": "Advanced",
+    "duration": "6-9 Months",
+    "icon": "Cloud",
+    "skills": [
+      "React",
+      "Node.js",
+      "Express",
+      "APIs",
+      "Databases",
+      "Deployment"
+    ],
+    "resources": [
+      { "name": "The Odin Project", "url": "https://www.theodinproject.com/" },
+      { "name": "Full Stack Open", "url": "https://fullstackopen.com/en/" }
+    ]
+  },
+  {
+    "title": "DevOps Engineer",
+    "description": "Learn DevOps tools, CI/CD, and cloud infrastructure.",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "duration": "4-8 Months",
+    "icon": "Shield",
+    "skills": [
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "GitHub Actions",
+      "AWS",
+      "Linux"
+    ],
+    "resources": [
+      { "name": "Docker Docs", "url": "https://docs.docker.com/" },
+      { "name": "Kubernetes Docs", "url": "https://kubernetes.io/docs/" },
+      { "name": "GitHub Actions", "url": "https://docs.github.com/actions" }
+    ]
+  },
+  {
+    "title": "AI/ML Engineer",
+    "description": "Explore artificial intelligence, machine learning, and AI agent frameworks.",
+    "category": "AI/ML",
+    "difficulty": "Beginner",
+    "duration": "5-8 Months",
+    "icon": "Brain",
+    "skills": [
+      "Python",
+      "NumPy",
+      "Pandas",
+      "PyTorch",
+      "LangChain",
+      "MCP",
+      "AI Agents"
+    ],
+    "resources": [
+      { "name": "DeepLearning.AI", "url": "https://www.deeplearning.ai/" },
+      { "name": "Kaggle Learn", "url": "https://www.kaggle.com/learn" },
+      { "name": "Hugging Face", "url": "https://huggingface.co/" }
+    ]
+  }
+]
